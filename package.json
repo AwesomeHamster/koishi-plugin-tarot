@@ -1,0 +1,23 @@
+{
+  "name": "@hamster-bot/koishi-plugin-tarot",
+  "version": "0.0.1",
+  "description": "A tarot plugin for Koishi",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --minify --dts --format cjs --out-dir lib --external koishi"
+  },
+  "devDependencies": {
+    "koishi": "^4.15.2",
+    "tsup": "^8.0.2"
+  },
+  "koishi": {
+    "description": {
+      "zh-CN": "抽取塔罗牌并显示简易牌意",
+      "en-US": "Draw a tarot card and show a brief meaning (Chinese only)"
+    },
+    "locales": [
+      "zh-CN"
+    ],
+    "preview": true
+  }
+}
