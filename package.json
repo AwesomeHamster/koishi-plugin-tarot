@@ -2,6 +2,11 @@
   "name": "@hamster-bot/koishi-plugin-tarot",
   "version": "0.0.1",
   "description": "A tarot plugin for Koishi",
+  "author": {
+    "name": "Maiko Tan",
+    "email": "maiko.tan.coding@gmail.com"
+  },
+  "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsup src/index.ts --minify --dts --format cjs --out-dir lib --external koishi"
