@@ -15,6 +15,17 @@ export function apply(ctx: Context) {
       let text2 = result.match(/(?<=(g±)).+/g)[0].replace(/(\\r)/, ' ')
       return h('message', text1, h('image', { url: img }), text2)
     })
+
+  ctx.i18n.define('zh-CN', {
+    'commands.tarot': {
+      description: '抽取一张塔罗牌',
+    },
+  })
+  ctx.i18n.define('en-US', {
+    'commands.tarot': {
+      description: 'Draw a tarot card (Chinese only)',
+    },
+  })
 }
 
 async function getTarot(ctx) {
