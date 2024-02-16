@@ -7,6 +7,9 @@
     "email": "maiko.tan.coding@gmail.com"
   },
   "license": "MIT",
+  "files": [
+    "lib"
+  ],
   "main": "lib/index.js",
   "scripts": {
     "build": "tsup src/index.ts --minify --dts --format cjs --out-dir lib --external koishi"
