@@ -1,0 +1,13 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    uses: AwesomeHamster/workflows/.github/workflows/build.yml@master
+    with:
+      lint: true
+      test: true
+      yarn-no-immutable: true
