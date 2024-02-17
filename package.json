@@ -23,7 +23,8 @@
   },
   "devDependencies": {
     "koishi": "^4.15.2",
-    "tsup": "^8.0.2"
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
   },
   "koishi": {
     "description": {
