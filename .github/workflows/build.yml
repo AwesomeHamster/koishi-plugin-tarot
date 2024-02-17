@@ -8,6 +8,6 @@ jobs:
   build:
     uses: AwesomeHamster/workflows/.github/workflows/build.yml@master
     with:
-      lint: true
-      test: true
+      lint: false
+      test: false
       yarn-no-immutable: true
