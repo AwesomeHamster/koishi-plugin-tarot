@@ -6,6 +6,13 @@
     "name": "Maiko Tan",
     "email": "maiko.tan.coding@gmail.com"
   },
+  "repository": {
+    "type": "git+https",
+    "url": "https://github.com/AwesomeHamster/koishi-plugin-tarot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AwesomeHamster/koishi-plugin-tarot/issues"
+  },
   "license": "MIT",
   "files": [
     "lib"
