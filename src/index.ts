@@ -29,6 +29,6 @@ export function apply(ctx: Context) {
 }
 
 async function getTarot(ctx) {
-  let result = await ctx.http('get', 'http://api.tangdouz.com/tarot.php')
+  let result = await ctx.http.get('http://api.tangdouz.com/tarot.php')
   return result
 }
