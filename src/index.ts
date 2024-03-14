@@ -13,7 +13,7 @@ export function apply(ctx: Context) {
       let img = result.match(/(?<=(±img=)).+(?=±)/g)[0]
       let text1 = result.match(/.+(?=(±i))/g)[0].replace(/(\\r)/, '\n')
       let text2 = result.match(/(?<=(g±)).+/g)[0].replace(/(\\r)/, ' ')
-      return h('message', h('image', { url: img }), text1, text2)
+      return h('message', h('img', { src: img }), text1, text2)
     })
 
   ctx.i18n.define('zh-CN', {
