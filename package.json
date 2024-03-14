@@ -1,6 +1,6 @@
 {
   "name": "@hamster-bot/koishi-plugin-tarot",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A tarot plugin for Koishi",
   "author": {
     "name": "Maiko Tan",
