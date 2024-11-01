@@ -16,14 +16,15 @@ export function apply(ctx: Context) {
       for (let i = 0; i < options.count || 1; i++) {
         let result = await getTarot(ctx)
         let img = result.match(/(?<=(±img=)).+(?=±)/g)[0]
+        let text1 = result.match(/.+(?=(±i))/g)[0].replace(/(\\r)/, '\n')
+        let text2 = result.match(/(?<=(g±)).+/g)[0].replace(/(\\r)/, ' ')
 
         if (options.minimal) {
-          ret.push(h('img', { src: img }))
+          ret.push(h('text', text1))
+          ret.push(h('text', text2))
           continue
         }
 
-        let text1 = result.match(/.+(?=(±i))/g)[0].replace(/(\\r)/, '\n')
-        let text2 = result.match(/(?<=(g±)).+/g)[0].replace(/(\\r)/, ' ')
         ret.push(h('img', { src: img }), text1, text2)
       }
       
@@ -34,7 +35,7 @@ export function apply(ctx: Context) {
     'commands.tarot': {
       description: '抽取一张塔罗牌',
       options: {
-        minimal: '仅输出图片',
+        minimal: '仅输出文本',
         count: '抽取张数',
       },
     },
@@ -43,7 +44,7 @@ export function apply(ctx: Context) {
     'commands.tarot': {
       description: 'Draw a tarot card (Chinese only)',
       options: {
-        minimal: 'show image only',
+        minimal: 'show text only',
         count: 'number of cards',
       },
     },
